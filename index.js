@@ -9,9 +9,12 @@ const postRouter = require('./routes/posts/posts')//import postrouter
 const userRouter = require('./routes/user/user')//import user router
 mongoose.set('strictQuery', false)
 
+
 env.config()
 
-app.use(cors())
+app.use(cors({
+    origin: "https://instagram-service-socialappcloning.onrender.com/"
+}))
 app.use(express.json())
 //call the routes here
 app.use('/api',authRouter)
