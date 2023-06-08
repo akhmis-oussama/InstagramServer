@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
-    "start-server": "node server/index.js",
-    "install-server": "npm install --prefix ./server",
+    "start-server": "node index.js",
+    "install-server": "npm install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
