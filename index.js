@@ -12,11 +12,10 @@ mongoose.set('strictQuery', false)
 
 env.config()
 
+const allowedOrigins = ['https://instagram-service-socialappcloning.onrender.com/'];
 app.use(cors({
-    origin: "https://instagram-service-socialappcloning.onrender.com/"
-}))
-app.use(express.json())
-//call the routes here
+  origin: allowedOrigins
+}));app.use(express.json())
 app.use('/api',authRouter)
 app.use('/api',postRouter)
 app.use('/api',userRouter)
